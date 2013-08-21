@@ -1,11 +1,9 @@
 require_relative '../person.rb'
 
-describe "person" do
+describe Person do
 
-  context  "harry" do
+  context  "when is harry" do
     it "should be harry" do
-
-      #this is the block
       harry = Person.new('harry')
       expect(harry.name).to eq "harry"
     end
@@ -15,16 +13,18 @@ describe "person" do
       harry = Person.new('harry', car)
       expect(harry.car_name).to eq "range rover"
     end
+
+    it "should be on the earth" do
+      harry = Person.new('harry')
+      expect(harry.meters_from_earth).to eq 0
+    end
   end
 
-  it "should be peter" do
-    harry = Person.new('peter')
-    expect(harry.name).to eq "peter"
-  end
-
-  it "should be on the earth" do
-    harry = Person.new('harry')
-    expect(harry.meters_from_earth).to eq 0
+  context "when is peter" do
+    it "should be peter" do
+      harry = Person.new('peter')
+      expect(harry.name).to eq "peter"
+    end
   end
 
   describe "#fly_now" do
@@ -44,6 +44,5 @@ describe "person" do
       expect(harry.husband).to eq 'peter'
     end
   end
-
 end
 
