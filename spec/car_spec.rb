@@ -1,3 +1,5 @@
+require_relative '../car.rb'
+
 describe "Car" do
 
   it "should be a range rover" do

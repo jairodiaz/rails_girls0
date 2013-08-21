@@ -1,12 +1,20 @@
-require './person.rb'
+require_relative '../person.rb'
 
 describe "person" do
 
-  it "should be harry" do
+  context  "harry" do
+    it "should be harry" do
 
-    #this is the block
-    harry = Person.new('harry')
-    expect(harry.name).to eq "harry"
+      #this is the block
+      harry = Person.new('harry')
+      expect(harry.name).to eq "harry"
+    end
+
+    it "should have a range rover" do
+      car = Car.new
+      harry = Person.new('harry', car)
+      expect(harry.car_name).to eq "range rover"
+    end
   end
 
   it "should be peter" do
