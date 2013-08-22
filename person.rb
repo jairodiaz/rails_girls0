@@ -29,7 +29,7 @@ class Person
     @husband.name
   end
 
-  def car_name
+  def car_brand
     @car.brand
   end
 end

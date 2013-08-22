@@ -11,7 +11,7 @@ describe Person do
     it "should have a range rover" do
       car = Car.new
       harry = Person.new('harry', car)
-      expect(harry.car_name).to eq "range rover"
+      expect(harry.car_brand).to eq "range rover"
     end
 
     it "should be on the earth" do
