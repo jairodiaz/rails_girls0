@@ -38,8 +38,7 @@ describe Person do
 
   describe "#marry_to" do
     it "should be married to peter" do
-      harry = Person.new('harry')
-      peter = Person.new('peter')
+      harry, peter = Person.new('harry'), Person.new('peter')
       harry.marry_to peter
       expect(harry.husband).to eq 'peter'
     end
