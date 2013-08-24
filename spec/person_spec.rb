@@ -8,12 +8,6 @@ describe Person do
       expect(harry.name).to eq "harry"
     end
 
-    it "should have a range rover" do
-      car = Car.new
-      harry = Person.new('harry', car)
-      expect(harry.car_brand).to eq "range rover"
-    end
-
     it "should be on the earth" do
       harry = Person.new('harry')
       expect(harry.meters_from_earth).to eq 0
@@ -41,6 +35,15 @@ describe Person do
       harry, peter = Person.new('harry'), Person.new('peter')
       harry.marry_to peter
       expect(harry.husband).to eq 'peter'
+    end
+  end
+
+  describe "#buy_car" do
+    it "should have a range rover" do
+      car = Car.new
+      harry = Person.new('harry')
+      harry.buy_car(car)
+      expect(harry.car_brand).to eq "range rover"
     end
   end
 end

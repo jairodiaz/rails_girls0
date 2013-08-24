@@ -11,10 +11,9 @@ class Person
   #    @name = person_name
   #  end
 
-  def initialize(first_name, car = nil)
+  def initialize(first_name)
     @name = first_name
     @meters_from_earth = 0
-    @car = car
   end
 
   def fly_now
@@ -31,5 +30,9 @@ class Person
 
   def car_brand
     @car.brand
+  end
+
+  def buy_car(car)
+    @car = car
   end
 end
