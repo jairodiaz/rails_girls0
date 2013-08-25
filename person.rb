@@ -11,8 +11,8 @@ class Person
   #    @name = person_name
   #  end
 
-  def initialize(first_name)
-    @name = first_name
+  def initialize(name)
+    @name = name
     @meters_from_earth = 0
   end
 
@@ -28,11 +28,11 @@ class Person
     @husband.name
   end
 
-  def car_brand
-    @car.brand
-  end
-
   def buy_car(car)
     @car = car
+  end
+
+  def car_brand
+    @car.brand
   end
 end
