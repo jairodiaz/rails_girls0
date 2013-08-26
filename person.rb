@@ -25,7 +25,7 @@ class Person
   end
 
   def husband
-    @husband.name
+    @husband ? @husband.name : nil
   end
 
   def buy_car(car)
@@ -34,5 +34,9 @@ class Person
 
   def car_brand
     @car.brand
+  end
+
+  def divorce
+    @husband = nil
   end
 end

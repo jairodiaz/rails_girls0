@@ -38,6 +38,15 @@ describe Person do
     end
   end
 
+  describe "#divorce" do
+    it "should remove the husband's name" do
+      harry, peter = Person.new('harry'), Person.new('peter')
+      harry.marry_to peter
+      harry.divorce
+      expect(harry.husband).to be_nil
+    end
+  end
+
   describe "#buy_car" do
     it "should have a range rover" do
       car = Car.new
