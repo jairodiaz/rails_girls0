@@ -14,10 +14,10 @@ describe Person do
     end
   end
 
-  context "when is peter" do
-    it "should be peter" do
-      harry = Person.new('peter')
-      expect(harry.name).to eq "peter"
+  context "when is jane" do
+    it "should be jane" do
+      harry = Person.new('jane')
+      expect(harry.name).to eq "jane"
     end
   end
 
@@ -32,9 +32,9 @@ describe Person do
 
   describe "#marry_to" do
     it "should be married to peter" do
-      harry, peter = Person.new('harry'), Person.new('peter')
-      harry.marry_to peter
-      expect(harry.husband).to eq 'peter'
+      maria, peter = Person.new('maria'), Person.new('peter')
+      maria.marry_to peter
+      expect(maria.husband).to eq 'peter'
     end
   end
 
